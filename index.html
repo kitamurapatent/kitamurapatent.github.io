@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>弁理士 北村一真 | Kazuma KITAMURA</title>
+  <meta name="description" content="弁理士 北村一真（登録番号23830）の紹介ページです。">
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card-bg: #ffffff;
+      --text: #1a2230;
+      --text-sub: #55606f;
+      --accent: #1b4f8a;
+      --border: #e3e7ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f141b;
+        --card-bg: #171e28;
+        --text: #e8ecf1;
+        --text-sub: #a3adba;
+        --accent: #6aa8e6;
+        --border: #26303c;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    .container {
+      width: 100%;
+      max-width: 640px;
+    }
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem 2rem;
+    }
+    header .name-ja {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    header .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.7rem;
+    }
+    header .title-ja {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.25em;
+      text-indent: 0.25em;
+    }
+    header .title-divider {
+      width: 1px;
+      height: 1.1em;
+      background: var(--border);
+    }
+    header .title-en {
+      font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      letter-spacing: 0.02em;
+    }
+    header .title-en a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    header .title-en a:hover {
+      border-bottom-color: var(--accent);
+    }
+    header .name-en {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.1em;
+      margin-top: 0.5rem;
+    }
+    header .reg {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #8b1a1a;
+      background: linear-gradient(145deg, #f5d77a, #e6c25a);
+      border: 1px solid #8b1a1a;
+      border-radius: 999px;
+      padding: 0.3rem 1rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.75rem 1.9rem;
+      margin-bottom: 1.25rem;
+    }
+    .card h2 {
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    ul.history {
+      list-style: none;
+    }
+    ul.history li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+    ul.history li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.75em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    ul.history li:last-child { margin-bottom: 0; }
+    ul.history .hist-en {
+      display: block;
+      font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-sub);
+      letter-spacing: 0.01em;
+      line-height: 1.5;
+      margin-top: 0.1rem;
+    }
+    ul.history a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    ul.history a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .fields {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .field-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: var(--accent);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.22rem 0.85rem;
+      white-space: nowrap;
+    }
+    .address {
+      font-size: 1.02rem;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .address a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .address a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      padding: 2rem 0 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title-row">
+        <span class="title-ja">弁理士</span>
+        <span class="title-divider"></span>
+        <span class="title-en">patent attorney@<a href="https://www.rc-iplaw.com/" target="_blank" rel="noopener">rc-iplaw</a></span>
+      </div>
+      <h1 class="name-ja">北村 一真</h1>
+      <p class="name-en">Kazuma KITAMURA</p>
+      <span class="reg">登録番号 23830</span>
+    </header>
+
+    <section class="card">
+      <h2>専門技術分野</h2>
+      <div class="fields">
+        <div class="field-row">
+          <span class="tag">機械学習</span>
+          <span class="tag">ニューラルネットワーク</span>
+          <span class="tag">信号処理</span>
+          <span class="tag">自然言語処理</span>
+        </div>
+        <div class="field-row">
+          <span class="tag">Transformerモデル</span>
+          <span class="tag">RNN</span>
+          <span class="tag">複素ニューラルネットワーク</span>
+        </div>
+        <div class="field-row">
+          <span class="tag">コンピュータ工学</span>
+          <span class="tag">大規模言語モデル</span>
+        </div>
+        <div class="field-row">
+          <span class="tag">通信工学</span>
+          <span class="tag">無線工学</span>
+          <span class="tag">リモートセンシング</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>経歴</h2>
+      <ul class="history">
+        <li>
+          <a href="https://www.nada.ac.jp/" target="_blank" rel="noopener">灘中学校・灘高等学校</a>
+          <span class="hist-en">NADA Junior and Senior High School</span>
+        </li>
+        <li>
+          <a href="https://www.kyoto-u.ac.jp/" target="_blank" rel="noopener">京都大学</a> 工学部 電気電子工学科
+          <span class="hist-en">Kyoto University, Faculty of Engineering,<br>Department of Electrical and Electronic Engineering (Bachelor of Engineering)</span>
+        </li>
+        <li>
+          <a href="https://www.kyoto-u.ac.jp/" target="_blank" rel="noopener">京都大学</a> 大学院情報学研究科 情報学専攻 通信情報システムコース 修士課程
+          <span class="hist-en">Kyoto University, Graduate School of Informatics,<br>Department of Communications and Computer Engineering (Master of Informatics)</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>CONTACT</h2>
+      <p class="address">〒530-0005　大阪府大阪市北区中之島3丁目3番3号<br>中之島三井ビルディング16階　<a href="https://www.rc-iplaw.com/" target="_blank" rel="noopener">弁理士法人Ｒ＆Ｃ</a>内</p>
+    </section>
+
+    <footer>
+      &copy; 2026 Kazuma KITAMURA
+    </footer>
+  </div>
+</body>
+</html>
