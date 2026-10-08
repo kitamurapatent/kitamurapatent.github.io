@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kitamurapatent.github.io/sitemap.xml
+Sitemap: https://kitamura.rc-iplaw.com/sitemap.xml
